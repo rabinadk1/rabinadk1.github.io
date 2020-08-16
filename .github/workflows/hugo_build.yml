@@ -44,7 +44,7 @@ jobs:
           # Set a personal access token for pushing to the remote branch.
 #           personal_token: # optional
           # Set a target branch for deployment.
-          publish_branch: master # optional, default is gh-pages
+#          publish_branch: # optional, default is gh-pages
           # Set an input directory for deployment.
 #           publish_dir: # optional, default is public
           # Set an external repository (owner/repo).
