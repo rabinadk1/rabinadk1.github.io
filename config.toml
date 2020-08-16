@@ -1,6 +1,6 @@
 publishDir = "docs"
 
-baseurl = "http://www.example.com"
+baseurl = "https://rabinadk1.github.io/"
 title = "johndoe"
 
 theme = "hugo-coder"
