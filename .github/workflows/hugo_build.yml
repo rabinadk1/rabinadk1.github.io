@@ -1,6 +1,6 @@
 # This is a basic workflow to help you get started with Actions
 
-name: Hugo Build
+name: Hugo Build and Deploy to GH Pages
 
 # Controls when the action will run. Triggers the workflow on push or pull request
 # events but only for the master branch
@@ -72,5 +72,5 @@ jobs:
           # An alias for enable_jekyll to disable adding .nojekyll file to master or gh-pages branches
 #           disable_nojekyll: # optional, default is false
           # Set custom domain
-#           cname: # optional
+          cname: rabinadhikari.com.np # optional
     
