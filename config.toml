@@ -1,5 +1,5 @@
 baseurl = "https://rabinadhikari.com.np/"
-title = "johndoe"
+title = "Rabin Adhikari"
 
 theme = "hugo-coder"
 
@@ -13,26 +13,26 @@ pygmentsstyle = "b2"
 pygmentscodefences = true
 pygmentscodefencesguesssyntax = true
 
-disqusShortname = "yourdiscussshortname"
+disqusShortname = "rabinadk1"
 
 [params]
-    author = "John Doe"
-    description = "John Doe's personal website"
+    author = "Rabin Adhikari"
+    description = "Rabin Adhikari's personal site"
     keywords = "blog,developer,personal"
-    info = "Full Stack DevOps and Magician"
+    info = "Full Stack Developer, Deep Learning Enthusiast, and Magician"
     avatarurl = "images/avatar.jpg"
-    #gravatar = "john.doe@example.com"
-    footercontent = "Enter a text here."
+    # gravatar = "john.doe@example.com"
+    footercontent = "Looking for an interesting project to work on"
 
     dateformat = "January 2, 2006"
 
     hideFooter = false
     hideCredits = false
     hideCopyright = false
-    since = 2019
+    since = 2020
 
     # Git Commit in Footer, uncomment the line below to enable it.
-    commit = "https://github.com/luizdepra/hugo-coder/tree/"
+    # commit = "https://github.com/luizdepra/hugo-coder/tree/"
 
     rtl = false
 
@@ -60,7 +60,7 @@ disqusShortname = "yourdiscussshortname"
 #     siteID = "ABCDE"
     # Default value is cdn.usefathom.com, overwrite this if you are self-hosting
 #     serverURL = "analytics.example.com"
-    
+
 # If you want to use plausible(https://plausible.io) for analytics, add this section
 # [params.plausibleAnalytics]
 #     domain = "example.com"
@@ -128,35 +128,35 @@ disqusShortname = "yourdiscussshortname"
             url = "contact/"
 
 
-    [languages.pt-br]
-        languagename = "Português"
-        title = "João Ninguém"
+    [languages.ne]
+        languagename = "Nepali"
+        title = "रबिन अधिकारी"
 
-        [languages.pt-br.params]
-            author = "João Ninguém"
-            info = "Full Stack DevOps e Mágico"
-            description = "Sítio pessoal de João Ninguém"
-            keywords = "blog,desenvolvedor,pessoal"
-            footercontent = "Coloque algum texto aqui."
+        [languages.ne.params]
+            author = "रबिन अधिकारी"
+            info = "पूर्ण स्ट्याक विकासकर्ता, डीप लर्निंग उत्साहित एवं जादूगर"
+            keywords = "ब्लग, विकासकर्ता, व्यक्तिगत"
+            description = "रबिन अधिकारीको व्यक्तिगत साइट"
+            footercontent = "कामका लागि ईन्टर्स्टिंग परियोजनाको खोजी गर्दै"
 
-        [languages.pt-br.menu]
+        [languages.ne.menu]
 
-            [[languages.pt-br.menu.main]]
-            name = "Sobre"
+            [[languages.ne.menu.main]]
+            name = "बारेमा"
             weight = 1
             url = "about/"
 
-            [[languages.pt-br.menu.main]]
-            name = "Blog"
+            [[languages.ne.menu.main]]
+            name = "ब्लग"
             weight = 2
             url = "posts/"
 
-            [[languages.pt-br.menu.main]]
-            name = "Projetos"
+            [[languages.ne.menu.main]]
+            name = "परियोजनाहरु"
             weight = 3
             url = "projects/"
 
-            [[languages.pt-br.menu.main]]
-            name = "Contato"
+            [[languages.ne.menu.main]]
+            name = "मलाई सम्पर्क गर्नुहोस्"
             weight = 5
             url = "contact/"
