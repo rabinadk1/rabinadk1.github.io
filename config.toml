@@ -20,7 +20,7 @@ disqusShortname = "rabinadk1"
     description = "Rabin Adhikari's personal site"
     keywords = "blog,developer,personal"
     info = "Full Stack Developer, Deep Learning Enthusiast, and Magician"
-    avatarurl = "images/avatar.jpg"
+    avatarurl = "images/avatar.webp"
     # gravatar = "john.doe@example.com"
     footercontent = "Looking for an interesting project to work on"
 
