@@ -14,6 +14,7 @@ pygmentscodefences = true
 pygmentscodefencesguesssyntax = true
 
 disqusShortname = "rabinadk1"
+googleAnalytics = "UA-176075966-1"
 
 [params]
     author = "Rabin Adhikari"
@@ -21,6 +22,7 @@ disqusShortname = "rabinadk1"
     keywords = "blog,developer,personal"
     info = "Full Stack Developer, Deep Learning Enthusiast, and Magician"
     avatarurl = "images/avatar.webp"
+    images = "images/avatar.webp" # for og and twitter
     # gravatar = "john.doe@example.com"
     footercontent = "Looking for an interesting project to work on"
 
