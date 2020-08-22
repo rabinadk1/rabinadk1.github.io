@@ -22,7 +22,7 @@ googleAnalytics = "UA-176075966-1"
     keywords = "blog,developer,personal"
     info = "Full Stack Developer, Deep Learning Enthusiast, and Magician"
     avatarurl = "images/avatar.webp"
-    images = "images/avatar.webp" # for og and twitter
+    images = ["images/avatar.webp"] # for og and twitter
     # gravatar = "john.doe@example.com"
     footercontent = "Looking for an interesting project to work on"
 
