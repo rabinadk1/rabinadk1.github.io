@@ -7,7 +7,6 @@ languagecode = "en"
 defaultcontentlanguage = "en"
 
 paginate = 20
-canonifyurls = true
 
 pygmentsstyle = "b2"
 pygmentscodefences = true
@@ -45,11 +44,14 @@ googleAnalytics = "UA-176075966-1"
     # "light" (light background, dark foreground) (default)
     colorscheme = "auto"
 
+    # Hide the toggle button, along with the associated vertical divider
+    hidecolorschemetoggle = false
+        
     # Series see also post count
     maxSeeAlsoItems = 5
 
     # Enable Twemoji
-    enableTwemoji = true
+    enableTwemoji = false
 
     # Custom CSS
     custom_css = []
@@ -76,27 +78,27 @@ googleAnalytics = "UA-176075966-1"
 
 [[params.social]]
     name = "Github"
-    icon = "fab fa-github"
+    icon = "fa fa-github"
     weight = 1
     url = "https://github.com/rabinadk1/"
 [[params.social]]
     name = "Gitlab"
-    icon = "fab fa-gitlab"
+    icon = "fa fa-gitlab"
     weight = 2
     url = "https://gitlab.com/rabinadk1"
 [[params.social]]
     name = "Twitter"
-    icon = "fab fa-twitter"
+    icon = "fa fa-twitter"
     weight = 3
     url = "https://twitter.com/rabinadk1/"
 [[params.social]]
     name = "LinkedIn"
-    icon = "fab fa-linkedin"
+    icon = "fa fa-linkedin"
     weight = 4
     url = "https://www.linkedin.com/in/rabinadk1/"
 [[params.social]]
     name = "RSS"
-    icon = "fas fa-rss"
+    icon = "fa fa-rss"
     weight = 5
     url = "https://rabinadhikari.com.np/index.xml"
     rel = "alternate"
