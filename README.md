@@ -1,2 +1,2 @@
 # rabinadk1.github.io
-Personal website made uging hugo-coder template from hugo
+Personal website made using hugo-coder template from hugo
