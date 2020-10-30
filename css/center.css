@@ -1,0 +1,6 @@
+/* Center aligns the images ending with #center */
+img[src$="#center"] {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
