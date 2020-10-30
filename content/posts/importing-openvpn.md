@@ -2,7 +2,7 @@
 date = "2020-10-30"
 title = "Importing OpenVPN Configuration"
 description = "Hands-on tutorial on how to import OpenVPN configuration from NetworkManager easily."
-images = ["https://upload.wikimedia.org/wikipedia/commons/f/f5/OpenVPN_logo.svg"]
+images = ["/images/OpenVPN_logo.svg"]
 tags = [
     "development",
 ]
