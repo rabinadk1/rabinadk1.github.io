@@ -45,7 +45,7 @@ Now when you click on the network manager applet on the taskbar, you can see the
 
 [vpnbook](https://www.vpnbook.com/freevpn) was chosen in this tutorial for the sake of simplicity. It is free for everyone so it's extremely slow and you might not have established a successful VPN connection due to this. You can try again if it didn’t connect for the first time.
 
-Right now, I have imported the [TunnelBear OpenVPN config files](https://s3.amazonaws.com/tunnelbear/linux/openvpn.zip) in the same way as above. Here for username and password, you have to enter your email and password you used when creating an account on [TunelBear](https://www.tunnelbear.com/). It gives you 500MB network transfer per month for free package users. For more, you have to pay for them.
+Right now, I have imported the [TunnelBear OpenVPN config files](https://s3.amazonaws.com/tunnelbear/linux/openvpn.zip) in the same way as above. Here for username and password, you have to enter your email and password you used when creating an account on [TunnelBear](https://www.tunnelbear.com/). It gives you 500MB network transfer per month for free package users. For more, you have to pay for them.
 
 You can also set up OpenVPN by moving the files to /etc/openvpn/client and starting the openvpn service from the command-line. More about the process [here](https://wiki.archlinux.org/index.php/TunnelBear). But I don’t like to use root access if it can be done by any user. The method described in this blog works for users without superuser privileges also. The only place where superuser privileges are required is when installing the prerequisite packages.
 
