@@ -35,6 +35,7 @@ googleAnalytics = "UA-176075966-1"
     # Git Commit in Footer, uncomment the line below to enable it.
     # commit = "https://github.com/luizdepra/hugo-coder/tree/"
 
+    # Enable the Right To Left mode.
     rtl = false
 
     # Specify light/dark colorscheme
@@ -54,10 +55,14 @@ googleAnalytics = "UA-176075966-1"
     enableTwemoji = false
 
     # Custom CSS
-    custom_css = ["css/center.css"]
+    customCSS = ["css/center.css"]
+
+    # Custom SCSS
+    customSCSS = []
 
     # Custom JS
-    custom_js = []
+    customJS = []
+
 
 [taxonomies]
   category = "categories"
