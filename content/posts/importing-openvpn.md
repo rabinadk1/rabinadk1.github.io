@@ -3,6 +3,7 @@ date = "2020-10-30"
 title = "Importing OpenVPN Configuration"
 description = "Hands-on tutorial on how to import OpenVPN configuration from NetworkManager easily."
 images = ["/images/OpenVPN_logo.png"]
+keywords = "linux openvpn networkmanager"
 tags = [
     "development",
 ]
@@ -13,7 +14,9 @@ categories = [
 series = ["Linux"]
 +++
 
-OpenVPN is a Virtual Private Network (VPN) system that implements techniques to create secure point-to-point or site-to-site connections in routed or bridged configurations and remote access facilities. It allows peers to authenticate each other using pre-shared secret keys, certificates, or username/password.
+OpenVPN is an open-source Virtual Private Network (VPN) system that implements techniques to create secure point-to-point or site-to-site connections in routed or bridged configurations and remote access facilities. It allows peers to authenticate each other using pre-shared secret keys, certificates, or username/password. It is recognized industry-wide as the most secure VPN encryption protocol. As well as being remarkably secure, OpenVPN is highly customizable and can be implemented by the users in several ways.
+
+The OpenVPN protocol is responsible for handling client-server communications. It allows you to connect to a remote network over a secure, encrypted connection and mask your IP addresses over all ports. When OpenVPN handles encryption and authentication, it uses the OpenSSL library quite extensively.
 
 Setting up OpenVPN in Linux is fairly easy. You can import its configuration from NetworkManager, _nm-connection-editor_ to be more specific. The configuration of OpenVPN has `.openvpn` extension. I want this blog to be a hands-on tutorial on how to import it. So, let’s get started.
 
