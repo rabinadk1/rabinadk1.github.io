@@ -1,16 +1,16 @@
-baseurl = "https://rabinadhikari.com.np/"
+baseUrl = "https://rabinadhikari.com.np/"
 title = "Rabin Adhikari"
 
 theme = "hugo-coder"
 
-languagecode = "en"
-defaultcontentlanguage = "en"
+languageCode = "en"
+defaultContentLanguage = "en"
 
 paginate = 20
 
-pygmentsstyle = "b2"
-pygmentscodefences = true
-pygmentscodefencesguesssyntax = true
+pygmentsStyle = "b2"
+pygmentsCodeFences = true
+pygmentsCodeFencesGuessSyntax = true
 
 disqusShortname = "rabinadk1"
 googleAnalytics = "UA-176075966-1"
@@ -20,12 +20,12 @@ googleAnalytics = "UA-176075966-1"
     description = "Rabin Adhikari's personal site"
     keywords = "blog,developer,personal"
     info = "Full Stack Developer, Deep Learning Enthusiast, and Magician"
-    avatarurl = "images/avatar.webp"
+    avatarUrl = "images/avatar.webp"
     images = ["images/avatar.webp"] # for og and twitter
     # gravatar = "john.doe@example.com"
-    footercontent = "Looking for an interesting project to work on"
+    footerContent = "Looking for an interesting project to work on"
 
-    dateformat = "January 2, 2006"
+    dateFormat = "January 2, 2006"
 
     hideFooter = false
     hideCredits = false
@@ -43,10 +43,10 @@ googleAnalytics = "UA-176075966-1"
     # "auto" (use preference set by browser)
     # "dark" (dark background, light foreground)
     # "light" (light background, dark foreground) (default)
-    colorscheme = "auto"
+    colorScheme = "auto"
 
     # Hide the toggle button, along with the associated vertical divider
-    hidecolorschemetoggle = false
+    hideColorSchemeToggle = false
 
     # Series see also post count
     maxSeeAlsoItems = 5
@@ -100,7 +100,7 @@ googleAnalytics = "UA-176075966-1"
 
 [languages]
     [languages.en]
-        languagename = "English"
+        languageName = "English"
 
         [languages.en.menu]
 
@@ -126,7 +126,7 @@ googleAnalytics = "UA-176075966-1"
 
 
     [languages.ne]
-        languagename = "Nepali"
+        languageName = "Nepali"
         title = "रबिन अधिकारी"
 
         [languages.ne.params]
@@ -134,7 +134,7 @@ googleAnalytics = "UA-176075966-1"
             info = "पूर्ण स्ट्याक विकासकर्ता, डीप लर्निंग उत्साहित एवं जादूगर"
             keywords = "ब्लग, विकासकर्ता, व्यक्तिगत"
             description = "रबिन अधिकारीको व्यक्तिगत साइट"
-            footercontent = "कामका लागि ईन्टर्स्टिंग परियोजनाको खोजी गर्दै"
+            footerContent = "कामका लागि ईन्टर्स्टिंग परियोजनाको खोजी गर्दै"
 
         [languages.ne.menu]
 
