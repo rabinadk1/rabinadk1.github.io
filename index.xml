@@ -22,8 +22,6 @@ Clone the hugo repository Go into the repo Run hugo in server mode and build the
 I am currently working as a Research Intern in doyo.ai, an incubation under Nepal Applied Mathematics and Informatics Institute for Research (NAAMII). Here my work is to build a Nepali Language Text Corpus from various newspapers and news articles.</description></item><item><title>Contact</title><link>https://rabinadhikari.com.np/contact/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://rabinadhikari.com.np/contact/</guid><description>Follow me, @rabinadk1.</description></item><item><title>Projects</title><link>https://rabinadhikari.com.np/projects/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://rabinadhikari.com.np/projects/</guid><description>3D Modelling of ICTC Jan 2020 – Mar 2020
 It is a 3D simulation of the ICTC building in the Pulchowk Campus written in C++ using OpenGL and GLSL.
 Other Creators
-Safal Thapaliya
-Samip Poudel
-See project
+Safal Thapaliya Samip Poudel See project
 Yeti Jan 2020
 It is a Progressive Web App (PWA) hosted at Firebase that uses its database and authentication API. It was developed for the Health and Tourism category of the Hack-A-Week contest organized by LOCUS, one of the largest technological festivals of Nepal.</description></item></channel></rss>
