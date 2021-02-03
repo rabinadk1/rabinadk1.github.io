@@ -11,9 +11,8 @@ It is a 3D simulation of the ICTC building in the Pulchowk Campus written in C++
 
 **Other Creators**
 
-Safal Thapaliya
-
-Samip Poudel
+* Safal Thapaliya
+* Samip Poudel
 
 [See project](https://github.com/rabinadk1/ICTC-modeling)
 
@@ -27,11 +26,9 @@ It aimed at rescuing the tourists and providing medical assistance from differen
 
 **Other Creators**
 
-Safal Thapaliya
-
-Madhav Aryal
-
-Kushal Pokharel
+* Safal Thapaliya
+* Madhav Aryal
+* Kushal Pokharel
 
 [See project](https://github.com/rabinadk1/Yeti)
 
@@ -44,9 +41,8 @@ The one to kill the other first wins.
 
 **Other Creators**
 
-Safal Thapaliya
-
-Samip Poudel
+* Safal Thapaliya
+* Samip Poudel
 
 [See project](https://github.com/rabinadk1/kurukshetra)
 
@@ -60,7 +56,7 @@ For this project, [Flask](https://flask.palletsprojects.com/), a micro-framework
 
 **Other Creators**
 
-Samip Poudel
+* Samip Poudel
 
 [See project](https://github.com/rabinadk1/SmartCounterServer)
 
