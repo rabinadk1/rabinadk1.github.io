@@ -70,29 +70,34 @@ googleAnalytics = "UA-176075966-1"
   tag = "tags"
 
 [[params.social]]
+    name = "Email"
+    icon = "fa fa-send"
+    weight = 1
+    url = "mailto:rabin.adk1@gmail.com"
+[[params.social]]
     name = "Github"
     icon = "fa fa-github"
-    weight = 1
+    weight = 2
     url = "https://github.com/rabinadk1/"
 [[params.social]]
     name = "Gitlab"
     icon = "fa fa-gitlab"
-    weight = 2
+    weight = 3
     url = "https://gitlab.com/rabinadk1"
 [[params.social]]
     name = "Twitter"
     icon = "fa fa-twitter"
-    weight = 3
+    weight = 4
     url = "https://twitter.com/rabinadk1/"
 [[params.social]]
     name = "LinkedIn"
     icon = "fa fa-linkedin"
-    weight = 4
+    weight = 5
     url = "https://www.linkedin.com/in/rabinadk1/"
 [[params.social]]
     name = "RSS"
     icon = "fa fa-rss"
-    weight = 5
+    weight = 6
     url = "https://rabinadhikari.com.np/index.xml"
     rel = "alternate"
     type = "application/rss+xml"

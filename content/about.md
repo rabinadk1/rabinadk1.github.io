@@ -1,28 +1,27 @@
 +++
-title = "About Hugo"
+title = "About Me"
 slug = "about"
 +++
 
-Hugo is a static site engine written in Go.
+Hi, I am Rabin.
+I am a computer engineering undergraduate studying at the [Institute of Engineering, Pulchowk Campus](https://pcampus.edu.np/).
+I am committed to learning and developing skills in Machine Learning, Web Development, and Networking.
+I am capable of self-managing and working independently or collaborating with others on group projects.
 
-It makes use of a variety of open source projects including:
+I am currently working as a Research Intern in doyo.ai, an incubation under [Nepal Applied Mathematics and Informatics Institute for Research (NAAMII)](https://www.naamii.com.np/).
+Here my work is to build a Nepali Language Text Corpus from various newspapers and news articles.
 
-- [Cobra](https://github.com/spf13/cobra)
-- [Viper](https://github.com/spf13/viper)
-- [J Walter Weatherman](https://github.com/spf13/jWalterWeatherman)
-- [Cast](https://github.com/spf13/cast)
+I am also the Event Chair of the IEEE Pulchowk Student Branch.
+Being in the position, I have organized Tech Talk on "A Platform for Innovations and Ideas" with the CEO of [Yatri Motorcycles](https://www.yatrimotorcycles.com/) and the CEO of [International Green Developers Nepal](http://greendevelopersnepal.com/) as the speakers of the
+session and, Blood Donation Programme in association with [Nepal Redcross Society](https://nrcs.org/).
 
-Learn more and contribute on [GitHub](https://github.com/spf13).
+### Interests
+* Artificial Intelligence
+* Machine Learning
+* Image Processing
+* Networking
+* Blockchain Technology
+* Web Development
+* Technology implementation for problem-solving
 
-## Setup
-
-Some fun facts about [Hugo](http://gohugo.io/):
-
-- Built in [Go](http://golang.org/)
-- Loosely inspired by [Jekyll](http://jekyllrb.com/)
-- Primarily developed by [spf13](http://spf13.com/) on the train while commuting to and from Manhattan.
-- Coded in [Vim](http://vim.org) using [spf13-vim](http://vim.spf13.com/)
-
-Have questions or suggestions? Feel free to [open an issue on GitHub](https://github.com/spf13/hugo/issues/new) or [ask me on Twitter](https://twitter.com/spf13).
-
-Thanks for reading!
+[Get My Resume](/media/CV.pdf)
