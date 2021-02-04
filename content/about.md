@@ -24,4 +24,4 @@ session and, Blood Donation Programme in association with [Nepal Redcross Societ
 * Web Development
 * Technology implementation for problem-solving
 
-[Get My Resume](/media/CV.pdf)
+[Get My Résumé](/media/CV.pdf)
