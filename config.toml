@@ -85,6 +85,7 @@ googleAnalytics = "UA-176075966-1"
         "'self'",
 		    "'unsafe-inline'",
             "https://ajax.cloudflare.com",
+            "https://static.cloudflareinsights.com",
 		    "https://www.google-analytics.com"
     ]
 	  prefetchsrc = ["'self'"]
