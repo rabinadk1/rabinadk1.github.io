@@ -86,7 +86,9 @@ googleAnalytics = "UA-176075966-1"
 		    "'unsafe-inline'",
             "https://ajax.cloudflare.com",
             "https://static.cloudflareinsights.com",
-		    "https://www.google-analytics.com"
+            "https://www.google-analytics.com",
+            "https://rabinadk1.disqus.com",
+            "https://cdn.jsdelivr.net/"
     ]
 	  prefetchsrc = ["'self'"]
 
