@@ -64,33 +64,34 @@ googleAnalytics = "UA-176075966-1"
     customJS = []
 
 # If you want to implement a Content-Security-Policy, add this section
-[params.csp]
-	  childsrc = ["'self'"]
-	  fontsrc = [
-        "'self'",
-		    "https://fonts.gstatic.com",
-		    "https://cdn.jsdelivr.net/"
-    ]
-	  formaction = ["'self'"]
-	  framesrc = ["'self'"]
-	  imgsrc = ["'self'"]
-	  objectsrc = ["'none'"]
-	  stylesrc = [
-        "'self'",
-		    "'unsafe-inline'",
-		    "https://fonts.googleapis.com/",
-		    "https://cdn.jsdelivr.net/"
-    ]
-	  scriptsrc = [
-        "'self'",
-		    "'unsafe-inline'",
-            "https://ajax.cloudflare.com",
-            "https://static.cloudflareinsights.com",
-            "https://www.google-analytics.com",
-            "https://rabinadk1.disqus.com",
-            "https://cdn.jsdelivr.net/"
-    ]
-	  prefetchsrc = ["'self'"]
+# NOTE: The work is tedius since add the sources have to be added
+# [params.csp]
+# 	  childsrc = ["'self'"]
+# 	  fontsrc = [
+#         "'self'",
+# 		    "https://fonts.gstatic.com",
+# 		    "https://cdn.jsdelivr.net/"
+#     ]
+# 	  formaction = ["'self'"]
+# 	  framesrc = ["'self'"]
+# 	  imgsrc = ["'self'"]
+# 	  objectsrc = ["'none'"]
+# 	  stylesrc = [
+#         "'self'",
+# 		    "'unsafe-inline'",
+# 		    "https://fonts.googleapis.com/",
+# 		    "https://cdn.jsdelivr.net/"
+#     ]
+# 	  scriptsrc = [
+#         "'self'",
+# 		    "'unsafe-inline'",
+#             "https://ajax.cloudflare.com",
+#             "https://static.cloudflareinsights.com",
+#             "https://www.google-analytics.com",
+#             "https://rabinadk1.disqus.com",
+#             "https://cdn.jsdelivr.net/"
+#     ]
+# 	  prefetchsrc = ["'self'"]
 
 [taxonomies]
   category = "categories"
