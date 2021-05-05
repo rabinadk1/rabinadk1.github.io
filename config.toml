@@ -52,7 +52,8 @@ googleAnalytics = "UA-176075966-1"
     maxSeeAlsoItems = 5
 
     # Enable Twemoji
-    enableTwemoji = false
+    # Chromium and other browsers may not work properly when turned off
+    enableTwemoji = true
 
     # Custom CSS
     customCSS = ["css/center.css"]
