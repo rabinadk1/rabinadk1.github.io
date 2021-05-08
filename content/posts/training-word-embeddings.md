@@ -1,7 +1,7 @@
 +++
 date = "2021-05-07"
 title = "Training of Word Embeddings"
-description = "How the training of word embeddings is done in text corpora"
+description = "This article goes through the basics of tokenization and word embeddings along with a brief insight into how its training is done in text corpora"
 images = ["/images/nearest_ten_points_of_man.webp"]
 keywords = "tokenization embeddeding training"
 tags = [
