@@ -2,7 +2,7 @@
 date = "2020-10-30"
 title = "Importing OpenVPN Configuration"
 description = "Hands-on tutorial on how to import OpenVPN configuration from NetworkManager easily."
-images = ["/images/OpenVPN_logo.png"]
+images = ["/images/OpenVPN_logo.webp"]
 keywords = "linux openvpn networkmanager"
 tags = [
     "development",
@@ -22,11 +22,11 @@ Setting up OpenVPN in Linux is fairly easy. You can import its configuration fro
 
 First of all, you should download the OpenVPN configuration from a source. They can be from any service provided you like, but for this blog, I will be using [vpnbook](https://www.vpnbook.com/freevpn) for the sake of simplicity.
 
-![vpnbook screenshot](/images/vpnbook_screenshot.png#center)
+![vpnbook screenshot](/images/vpnbook_screenshot.webp#center)
 
 The picture shown above is the screenshot of the link to vpnbook provided above. Download any OpenVPN Certificate Bundle from the provided ones according to your location and need. I downloaded [US1 OpenVPN Certificate Bundle](https://www.vpnbook.com/free-openvpn-account/VPNBook.com-OpenVPN-US1.zip). Now let's go ahead and look at the contents of the zip file you just downloaded.
 
-![openvpn bundle contents](/images/openvpn_bundle_contents.png#center)
+![openvpn bundle contents](/images/openvpn_bundle_contents.webp#center)
 
 The zip contained the files shown in the figure above. As said on the website of vpnbook, these are UDP 53, UDP 25000, TCP 80, TCP 443 profile. For those of you who don’t know it, TCP and UDP are protocols and the numbers beside them are the port in which they operate. For example, `vpnbook-us1-udp53.openvpn` has a configuration for UDP protocol operating on port 53 for the VPN.
 
@@ -38,7 +38,7 @@ You’ll be prompted to choose a connection type from the dropdown, which will d
 
 After clicking _Create_, you will be prompted to choose the openvpn configuration file. Go ahead and show it the .openvpn file you chose earlier. Quick info: **UDP is faster but can result in data loss and TCP is more reliable**. Vpnbook instructs to use TCP if you cannot connect to UDP due to network restriction. I choose `vpnbook-us1-udp53.openvpn` and import it. You can choose any one of the four files.
 
-![openvpn configuration imported](/images/openvpn_imported.png#center)
+![openvpn configuration imported](/images/openvpn_imported.webp#center)
 
 As you can see the network manager automatically imports the settings for you. You don’t have to manually type it. The configuration just imported had a key and a certificate inside it. So the network manager created them inside the .cert directory in your \$HOME directory. If you have a different file for your certificate and/or key then also network manager imports it in the configuration but you shouldn’t move the certificate and the key file, since it stores its location in the configuration. If you happen to move any of those files then you have to change its location from this configuration in _nm-connection-editor_.
 
