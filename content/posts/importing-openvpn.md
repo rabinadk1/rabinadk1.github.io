@@ -1,7 +1,7 @@
 +++
 date = "2020-10-30"
 title = "Importing OpenVPN Configuration"
-description = "Hands-on tutorial on how to import OpenVPN configuration from NetworkManager easily."
+description = "Hands-on tutorial on how to import OpenVPN configuration on Linux from NetworkManager easily."
 images = ["/images/OpenVPN_logo.webp"]
 keywords = "linux openvpn networkmanager"
 tags = [
@@ -76,7 +76,7 @@ You can choose any one of the four files.
 As you can see the network manager automatically imports the settings for you.
 You don’t have to manually type it.
 The configuration just imported had a key and a certificate inside it.
-So the network manager created them inside the `.cert` directory in your `\$HOME` directory.
+So the network manager created them inside the `.cert` directory in your `$HOME` directory.
 If you have a different file for your certificate and/or key then also network manager imports it in the configuration but you shouldn’t move the certificate and the key file, since it stores its location in the configuration.
 If you happen to move any of those files then you have to change its location from this configuration in _nm-connection-editor_.
 
