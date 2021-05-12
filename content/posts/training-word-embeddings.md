@@ -59,7 +59,7 @@ A variant of this technique is used in different state-of-the-art natural langua
 A very good example of encoding a word with byte pair encoding is provided in the Wikipedia article [Byte Pair Encoding](https://en.wikipedia.org/wiki/Byte_pair_encoding).
 
 Byte pair encoding is a sub-word tokenizer used to make parts of words as a token rather than treating a single word as a single token.
-When we have a corpus of text and we need to build a byte pair encoder, we start by appending a special token like “\</w\>” to the end of each token to mark the end of words since our tokens are subwords.
+When we have a corpus of text and we need to build a byte pair encoder, we start by appending a special token like `</w>` to the end of each token to mark the end of words since our tokens are subwords.
 We build a dictionary of the frequency of words to count the frequency of different byte pairs.
 We start by splitting words into letters and assigning them unique tokens, which will be stored in a dictionary, making each word a sequence of tokens, in which each token is of a single character
 We find the most frequent consecutive character tokens and replace them with a new token.
@@ -70,17 +70,17 @@ The source code of doing byte pair encoding for a corpus of code can be found in
 
 Another advantage of this method is that this generalizes better than word tokenizer to out of vocabulary words.
 It splits the out of vocabulary words into a token of subwords with maximum length lying in the given word.
-An out of vocabulary word like transformer can be encoded to [“trans”, “former”, “\</w\>”] if it had seen “trans” and “former” previously.
-But if we chose to remove infrequent tokens to reduce the vocabulary size and we don’t have all the characters from which our corpus is built then tokenized texts contain another special token call “\<oov\>” or “\<unk\>” which stands for out of vocabulary and unknown tokens respectively.
-For example, if “h” is not in our vocabulary, “hype” may be tokenized as [“\<oov\>”, “ype”].
+An out of vocabulary word like transformer can be encoded to `[“trans”, “former”, “</w>”]` if it had seen “trans” and “former” previously.
+But if we chose to remove infrequent tokens to reduce the vocabulary size and we don’t have all the characters from which our corpus is built then tokenized texts contain another special token called `<oov>` or `<unk>` which stands for out of vocabulary and unknown tokens respectively.
+For example, if “h” is not in our vocabulary, “hype” may be tokenized as `[“<oov>”, “ype”]`.
 Practically, this happens mainly to special characters like emojis and may occur more in non-English languages.
 
 ### Byte-level BPE
 
 The base characters for the vocabulary can be quite big if we opted to incorporate all the Unicode characters.
-The problem of tokenizing texts with “\<oov\>” tokens is more prominent in a non-English language.
+The problem of tokenizing texts with `<oov>` tokens is more prominent in a non-English language.
 Byte-level BPE is a clever tweak of its predecessor BPE in which bytes are included in the base vocabulary.
-Since a byte consists of 8 bits, there are 2^8 i.e. 256 combinations of words that are included in the base vocabulary.
+Since a byte consists of 8 bits, there are 2<sup>8</sup> i.e. 256 combinations of words that are included in the base vocabulary.
 This helps to tokenize every text without needing an out of vocabulary token.
 This clever trick was proposed in [GPT-2 Paper](https://openai.com/blog/better-language-models/).
 
@@ -107,8 +107,8 @@ Since some languages like Chinese, Japanese, Thai, etc. don't use spaces to sepa
 [SentencePiece: A simple and language independent subword tokenizer and detokenizer for Neural Text Processing](https://arxiv.org/abs/1808.06226) paper introduces a novel technique for tokenization.
 It treats the input as a raw stream, i.e. sentence as a whole rather than a collection of words, and includes space in the set of characters to use and then uses BPE or unigram to construct the appropriate vocabulary.
 
-The implementation of this algorithm commonly represents a space character as a “\_” character.
-So we may find different tokens with “\_” in them.
+The implementation of this algorithm commonly represents a space character as a `_` character.
+So we may find different tokens with `_` in them.
 The models like XLM described in [Cross-lingual Language Model Pretraining](https://arxiv.org/abs/1901.07291) described in use this kind of tokenization.
 This is considered to be the state-of-the-art tokenizer at the time of writing this document.
 
