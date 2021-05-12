@@ -31,7 +31,7 @@ This keeps the same representation for the common words but breaks the rate word
 <a class=heading-link href=#byte-pair-encoding-bpe><i class="fa fa-link" aria-hidden=true></i></a></h3><p>Byte Pair Encoding, also known as diagram coding, is a simple form of lossless data compression in which the most common pair of consecutive bytes of data is replaced with a byte different from the ones originally in the data or corpus of texts.
 A variant of this technique is used in different state-of-the-art natural language processing applications, like Transformers, and OpenAI’s GPT, GPT-2, and GPT-3.
 A very good example of encoding a word with byte pair encoding is provided in the Wikipedia article <a href=https://en.wikipedia.org/wiki/Byte_pair_encoding>Byte Pair Encoding</a>.</p><p>Byte pair encoding is a sub-word tokenizer used to make parts of words as a token rather than treating a single word as a single token.
-When we have a corpus of text and we need to build a byte pair encoder, we start by appending a special token like “&lt;/w>” to the end of each token to mark the end of words since our tokens are subwords.
+When we have a corpus of text and we need to build a byte pair encoder, we start by appending a special token like <code>&lt;/w></code> to the end of each token to mark the end of words since our tokens are subwords.
 We build a dictionary of the frequency of words to count the frequency of different byte pairs.
 We start by splitting words into letters and assigning them unique tokens, which will be stored in a dictionary, making each word a sequence of tokens, in which each token is of a single character
 We find the most frequent consecutive character tokens and replace them with a new token.
@@ -40,14 +40,14 @@ This can also be controlled by setting maximum sub-word length and maximum itera
 Practically it can be found that during the above recursive process, the number of tokens increases first then starts to decrease.
 The source code of doing byte pair encoding for a corpus of code can be found in <a href=https://github.com/rsennrich/subword-nmt>Unsupervised Word Segmentation for Neural Machine Translation and Text Generation</a> which was used in the paper <a href=https://arxiv.org/abs/1508.07909>Neural Machine Translation of Rare Words with Subword Units</a>.</p><p>Another advantage of this method is that this generalizes better than word tokenizer to out of vocabulary words.
 It splits the out of vocabulary words into a token of subwords with maximum length lying in the given word.
-An out of vocabulary word like transformer can be encoded to [“trans”, “former”, “&lt;/w>”] if it had seen “trans” and “former” previously.
-But if we chose to remove infrequent tokens to reduce the vocabulary size and we don’t have all the characters from which our corpus is built then tokenized texts contain another special token call “&lt;oov>” or “&lt;unk>” which stands for out of vocabulary and unknown tokens respectively.
-For example, if “h” is not in our vocabulary, “hype” may be tokenized as [“&lt;oov>”, “ype”].
+An out of vocabulary word like transformer can be encoded to <code>[“trans”, “former”, “&lt;/w>”]</code> if it had seen “trans” and “former” previously.
+But if we chose to remove infrequent tokens to reduce the vocabulary size and we don’t have all the characters from which our corpus is built then tokenized texts contain another special token called <code>&lt;oov></code> or <code>&lt;unk></code> which stands for out of vocabulary and unknown tokens respectively.
+For example, if “h” is not in our vocabulary, “hype” may be tokenized as <code>[“&lt;oov>”, “ype”]</code>.
 Practically, this happens mainly to special characters like emojis and may occur more in non-English languages.</p><h3 id=byte-level-bpe>Byte-level BPE
 <a class=heading-link href=#byte-level-bpe><i class="fa fa-link" aria-hidden=true></i></a></h3><p>The base characters for the vocabulary can be quite big if we opted to incorporate all the Unicode characters.
-The problem of tokenizing texts with “&lt;oov>” tokens is more prominent in a non-English language.
+The problem of tokenizing texts with <code>&lt;oov></code> tokens is more prominent in a non-English language.
 Byte-level BPE is a clever tweak of its predecessor BPE in which bytes are included in the base vocabulary.
-Since a byte consists of 8 bits, there are 2^8 i.e. 256 combinations of words that are included in the base vocabulary.
+Since a byte consists of 8 bits, there are 2<sup>8</sup> i.e. 256 combinations of words that are included in the base vocabulary.
 This helps to tokenize every text without needing an out of vocabulary token.
 This clever trick was proposed in <a href=https://openai.com/blog/better-language-models/>GPT-2 Paper</a>.</p><h3 id=wordpiece>WordPiece
 <a class=heading-link href=#wordpiece><i class="fa fa-link" aria-hidden=true></i></a></h3><p>WordPiece is a sub-word tokenization algorithm that is used in language representation models like <a href=https://arxiv.org/abs/1810.04805>BERT</a> and was outlined in <a href=https://static.googleusercontent.com/media/research.google.com/ja//pubs/archive/37842.pdf>JAPANESE AND KOREAN VOICE SEARCH</a> paper.</p><p>It relies on the same base as BPE, which is to initialize the vocabulary to every character present in the corpus and progressively learn a given number of merge rules.
@@ -60,8 +60,8 @@ It focuses more on rare sub-word tokens.</p><h3 id=sentencepiece>SentencePiece
 <a class=heading-link href=#sentencepiece><i class="fa fa-link" aria-hidden=true></i></a></h3><p>All the tokenizing methods discussed above required some pre-tokenization.
 Those methods act like sub-word tokenizers which have to know what words are.
 Since some languages like Chinese, Japanese, Thai, etc. don&rsquo;t use spaces to separate words, the aforementioned methods cannot be used in those languages.</p><p><a href=https://arxiv.org/abs/1808.06226>SentencePiece: A simple and language independent subword tokenizer and detokenizer for Neural Text Processing</a> paper introduces a novel technique for tokenization.
-It treats the input as a raw stream, i.e. sentence as a whole rather than a collection of words, and includes space in the set of characters to use and then uses BPE or unigram to construct the appropriate vocabulary.</p><p>The implementation of this algorithm commonly represents a space character as a “_” character.
-So we may find different tokens with “_” in them.
+It treats the input as a raw stream, i.e. sentence as a whole rather than a collection of words, and includes space in the set of characters to use and then uses BPE or unigram to construct the appropriate vocabulary.</p><p>The implementation of this algorithm commonly represents a space character as a <code>_</code> character.
+So we may find different tokens with <code>_</code> in them.
 The models like XLM described in <a href=https://arxiv.org/abs/1901.07291>Cross-lingual Language Model Pretraining</a> described in use this kind of tokenization.
 This is considered to be the state-of-the-art tokenizer at the time of writing this document.</p><h1 id=one-hot-encoding>One-Hot Encoding
 <a class=heading-link href=#one-hot-encoding><i class="fa fa-link" aria-hidden=true></i></a></h1><p>Since tokens are just numbers, they might represent a token to be of higher importance than others.
