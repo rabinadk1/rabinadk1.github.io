@@ -12,7 +12,12 @@ pygmentsStyle = "b2"
 pygmentsCodeFences = true
 pygmentsCodeFencesGuessSyntax = true
 
+enableEmoji = true
+
+# Enable Disqus comments
 disqusShortname = "rabinadk1"
+
+# Enable Google Analytics
 googleAnalytics = "UA-176075966-1"
 
 [params]
@@ -32,9 +37,6 @@ googleAnalytics = "UA-176075966-1"
     hideCopyright = false
     since = 2020
 
-    # Git Commit in Footer, uncomment the line below to enable it.
-    # commit = "https://github.com/luizdepra/hugo-coder/tree/"
-
     # Enable the Right To Left mode.
     rtl = false
 
@@ -52,8 +54,7 @@ googleAnalytics = "UA-176075966-1"
     maxSeeAlsoItems = 5
 
     # Enable Twemoji
-    # Chromium and other browsers may not work properly when turned off
-    enableTwemoji = true
+    enableTwemoji = false
 
     # Custom CSS
     customCSS = ["css/center.css"]
@@ -135,7 +136,7 @@ googleAnalytics = "UA-176075966-1"
 
 [languages]
     [languages.en]
-        languageName = "English"
+        languageName = ":us:"
 
         [languages.en.menu]
 
@@ -161,7 +162,7 @@ googleAnalytics = "UA-176075966-1"
 
 
     [languages.ne]
-        languageName = "Nepali"
+        languageName = ":nepal:"
         title = "रबिन अधिकारी"
 
         [languages.ne.params]
@@ -192,3 +193,8 @@ googleAnalytics = "UA-176075966-1"
             name = "मलाई सम्पर्क गर्नुहोस्"
             weight = 5
             url = "contact/"
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true

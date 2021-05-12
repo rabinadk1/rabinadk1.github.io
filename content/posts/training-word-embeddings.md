@@ -80,7 +80,7 @@ Practically, this happens mainly to special characters like emojis and may occur
 The base characters for the vocabulary can be quite big if we opted to incorporate all the Unicode characters.
 The problem of tokenizing texts with “\<oov\>” tokens is more prominent in a non-English language.
 Byte-level BPE is a clever tweak of its predecessor BPE in which bytes are included in the base vocabulary.
-Since a byte consists of 8 bits, there are 28 i.e. 256 combinations of words that are included in the base vocabulary.
+Since a byte consists of 8 bits, there are 2^8 i.e. 256 combinations of words that are included in the base vocabulary.
 This helps to tokenize every text without needing an out of vocabulary token.
 This clever trick was proposed in [GPT-2 Paper](https://openai.com/blog/better-language-models/).
 
