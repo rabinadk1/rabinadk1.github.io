@@ -8,7 +8,7 @@ I am a computer engineering undergraduate studying at the [Institute of Engineer
 I am committed to learning and developing skills in Machine Learning, Web Development, and Networking.
 I am capable of self-managing and working independently or collaborating with others on group projects.
 
-I am currently working as a Research Intern in diyo.ai, an incubation under [Nepal Applied Mathematics and Informatics Institute for Research (NAAMII)](https://www.naamii.com.np/).
+I am currently working as a Research Intern in [diyo.ai](https://diyo.ai/), an incubation at [Nepal Applied Mathematics and Informatics Institute for Research (NAAMII)](https://www.naamii.com.np/).
 Here my work is to build a Nepali Language Text Corpus from various newspapers and news articles.
 
 I am also the Event Chair of the IEEE Pulchowk Student Branch.
