@@ -45,12 +45,12 @@ The model fails to learn a representation of texts as meaningful as when using a
 To get the best of both word-level and character-level tokenizers, sub-word tokenizers are used.
 They use less memory than word-level tokenizers and help capture a more meaningful representation of texts than character-level tokenizers.
 
-Old language models based on word-level tokenization learned the relationship between words from the same stem-like “big”, “bigger” and “biggest” from their word embedding built from the provided corpus but they couldn’t generalize the learned dimension to similar word vectors like “old”, “older” and “oldest”.
+Old language models based on word-level tokenization learned the relationship between words from the same stem-like “big”, “bigger”, and “biggest” from their word embedding built from the provided corpus but they couldn’t generalize the learned dimension to similar word vectors like “old”, “older”, and “oldest”.
 If we learned somehow to differentiate the stem word from the words then the effect of the same suffix or prefix is also similar in the case of other words.
 Sub-word tokenization addresses this problem to a certain extent.
 This keeps the same representation for the common words but breaks the rate words into sub-word tokens.
 
-Different types of sub-word tokenizers currently being used in the field of Natural Language Processing (NLP) are described in brief below.
+Different types of sub-word tokenizers currently being used in the field of <abbr title="Natural Language Processing">NLP</abbr> are described in brief below.
 
 ### Byte Pair Encoding (BPE)
 
@@ -154,8 +154,8 @@ The figure below helps to understand this concept more clearly.
 ![word embeddings capturing directions](/images/direction_in_word_embeddings.webp#center)
 
 Since the embeddings are vectors in a higher dimension and show the similarities between the words, they can be projected down to 2D or 3D space using various techniques like [UMAP: Uniform Manifold Approximation and Projection for Dimension Reduction](https://umap-learn.readthedocs.io/en/latest/), [t-distributed stochastic neighbor embedding](https://en.wikipedia.org/wiki/T-distributed_stochastic_neighbor_embedding), [Principal Component Analysis (PCA)](https://en.wikipedia.org/wiki/Principal_component_analysis), etc. according to the need.
-The projections of common embeddings can be found in Embedding projector - visualization of high-dimensional data where you can upload your own custom embeddings too.
-A sample image showing the nearest ten points of word _man_ for the _Word2Vec 10K_ model in terms of cosine similarity, projected to 2D space using PCA and sphereizing the data is shown below.
+The projections of common embeddings can be found in [Embedding projector - visualization of high-dimensional data](https://projector.tensorflow.org/) where you can upload your own custom embeddings too.
+A sample image showing the nearest ten points of word _man_ for the _Word2Vec 10K_ model in terms of cosine similarity, projected to 2D space using <abbr title="Principal Component Analysis">PCA</abbr> and sphereizing the data is shown below.
 
 ![nearest ten points of man](/images/nearest_ten_points_of_man.webp#center)
 
