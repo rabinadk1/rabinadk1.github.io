@@ -22,8 +22,8 @@ googleAnalytics = "UA-176075966-1"
 
 [params]
     author = "Rabin Adhikari"
-    description = "Rabin Adhikari's personal site"
-    keywords = "blog,developer,personal"
+    description = "I am a computer engineering undergrad studying at the Institute of Engineering, Pulchowk Campus. I am currently in the post of Software Coordinator in LOCUS. I am interested in Artificial Intelligence, Machine Learning, Computer Vision, and Natural Language Processing"
+    keywords = "blog,developer,personal,tech,linux"
     info = "Full Stack Developer, Deep Learning Enthusiast, and Magician"
     avatarUrl = "images/avatar.webp"
     images = ["images/avatar.webp"] # for og and twitter
