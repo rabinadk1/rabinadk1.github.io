@@ -16,7 +16,8 @@ series = ["Artificial Intelligence"]
 
 # Tokenization
 
-Since the computer doesn’t understand strings as a numerical value, they need to be converted into some kind of numeric form.
+
+Since the computer doesn’t understand strings as a numerical value, they need to be converted into numeric forms.
 So the sentences used for training are converted into sequence tokens using some kind of tokenizer.
 The process of converting a text into a sequence of tokens is called tokenization.
 Tokenization can be broadly classified into 3 types viz. word, character, and subword (n-gram characters).
@@ -27,8 +28,8 @@ Word tokenizers tokenize each word separately by splitting the sentence with spa
 But soon enough, we find out that they are not that great to capture the relationship between the words.
 “Don’t” and “Do not” are the same for us as humans but not for the tokenizer which may result in different meanings for these words to the model.
 To overcome this kind of problem different rules started to be used to separate a text into tokens.
-Depending on the rules we apply to split our texts into tokens, we’ll get different tokenized versions of the same text.
-So the pre-trained model will not perform well if the exact same rules used to pre-train them are not used when evaluating or fine-tuning them.
+We’ll get different tokenized versions of the same text depending on the rules we apply to split our texts into tokens.
+So the pre-trained model will not perform well if the same rules used to pre-train them are not used when evaluating or fine-tuning them.
 
 Another drawback of this method is the vocabulary associated with it.
 An increase in vocabulary means an increase in the size of the embedding matrix, which causes huge consumption of memory.
@@ -36,8 +37,8 @@ An increase in vocabulary means an increase in the size of the embedding matrix,
 ## Character Tokenizer
 
 Character tokenizers tokenize each character as a token.
-Its main advantages are its simplicity and speed, and a lot less use of memory than word tokenizers.
-But this doesn’t allow the model to capture long term dependencies in a sentence and performs poorly.
+Its main advantages are its simplicity and speed and less use of memory than word tokenizers.
+But this doesn’t allow the model to capture long-term dependencies in a sentence and performs poorly.
 The model fails to learn a representation of texts as meaningful as when using a word tokenization.
 
 ## Sub-word Tokenizer
@@ -104,7 +105,7 @@ All the tokenizing methods discussed above required some pre-tokenization.
 Those methods act like sub-word tokenizers which have to know what words are.
 Since some languages like Chinese, Japanese, Thai, etc. don't use spaces to separate words, the aforementioned methods cannot be used in those languages.
 
-[SentencePiece: A simple and language independent subword tokenizer and detokenizer for Neural Text Processing](https://arxiv.org/abs/1808.06226) paper introduces a novel technique for tokenization.
+[SentencePiece](https://arxiv.org/abs/1808.06226) introduces a novel technique for tokenization.
 It treats the input as a raw stream, i.e. sentence as a whole rather than a collection of words, and includes space in the set of characters to use and then uses BPE or unigram to construct the appropriate vocabulary.
 
 The implementation of this algorithm commonly represents a space character as a `_` character.
@@ -154,8 +155,8 @@ The figure below helps to understand this concept more clearly.
 ![word embeddings capturing directions](/images/direction_in_word_embeddings.webp#center)
 
 Since the embeddings are vectors in a higher dimension and show the similarities between the words, they can be projected down to 2D or 3D space using various techniques like [UMAP: Uniform Manifold Approximation and Projection for Dimension Reduction](https://umap-learn.readthedocs.io/en/latest/), [t-distributed stochastic neighbor embedding](https://en.wikipedia.org/wiki/T-distributed_stochastic_neighbor_embedding), [Principal Component Analysis (PCA)](https://en.wikipedia.org/wiki/Principal_component_analysis), etc. according to the need.
-The projections of common embeddings can be found in [Embedding projector - visualization of high-dimensional data](https://projector.tensorflow.org/) where you can upload your own custom embeddings too.
-A sample image showing the nearest ten points of word _man_ for the _Word2Vec 10K_ model in terms of cosine similarity, projected to 2D space using <abbr title="Principal Component Analysis">PCA</abbr> and sphereizing the data is shown below.
+The projections of common embeddings can be found in [Embedding projector - visualization of high-dimensional data](https://projector.tensorflow.org/) where you can upload your custom embeddings too.
+A sample image showing the nearest ten points of word _man_ for the _Word2Vec 10K_ model in terms of cosine similarity, projected to 2D space using <abbr title="Principal Component Analysis">PCA</abbr> and sphering the data is shown below.
 
 ![nearest ten points of man](/images/nearest_ten_points_of_man.webp#center)
 
@@ -164,7 +165,7 @@ Since the word embeddings are built solely upon the data seen by the model, they
 # Training Word Embeddings
 
 Each token picks up a randomly initialized vector from the embedding matrix using its unique index and the loss of the model is backpropagated to update the vectors and ultimately the matrix.
-When the training is complete the embedding matrix contains dense vectors for each token which can be used to make different interpretations about the model and the particular task on which the model was trained on.
+When the training is complete the embedding matrix contains dense vectors for each token which can be used to make different interpretations about the model and the particular task on which the model was trained.
 
 Word embeddings are normally trained for a particular task.
 The word embedding for the task of classifying the text can be different from that of generating alt text for the images.
