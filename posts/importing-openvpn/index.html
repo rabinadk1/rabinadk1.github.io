@@ -10,58 +10,60 @@
 <span class=tag><a href=/tags/development/>development</a></span></div></div></header><div><p>OpenVPN is an open-source Virtual Private Network (VPN) system that implements techniques to create secure point-to-point or site-to-site connections in routed or bridged configurations and remote access facilities.
 It allows peers to authenticate each other using pre-shared secret keys, certificates, or username/password.
 It is recognized industry-wide as the most secure VPN encryption protocol.
-As well as being remarkably secure, OpenVPN is highly customizable and can be implemented by the users in several ways.</p><p>The OpenVPN protocol is responsible for handling client-server communications.
+As well as being remarkably reliable, OpenVPN is highly customizable and can be implemented by users in several ways.</p><p>The OpenVPN protocol is responsible for handling client-server communications.
 It allows you to connect to a remote network over a secure, encrypted connection and mask your IP addresses over all ports.
 When OpenVPN handles encryption and authentication, it uses the OpenSSL library quite extensively.</p><p>Setting up OpenVPN in Linux is fairly easy.
-You can import its configuration from NetworkManager, <em>nm-connection-editor</em> to be more specific.
+You can import its configuration from the NetworkManager, <em>nm-connection-editor</em>, to be more specific.
 The configuration of OpenVPN has <code>.openvpn</code> extension.
 I want this blog to be a hands-on tutorial on how to import it.
-So, let’s get started.</p><p>First of all, you should download the OpenVPN configuration from a source.
-They can be from any service provided you like, but for this blog, I will be using <a href=https://www.vpnbook.com/freevpn>vpnbook</a> for the sake of simplicity.</p><p><img src=/images/vpnbook_screenshot.webp#center alt="vpnbook screenshot"></p><p>The picture shown above is the screenshot of the link to vpnbook provided above.
+So, let’s get started.</p><p>First of all, you should download the OpenVPN configuration.
+It can be downloaded be from any service provider of your choice, but for this blog, I will be using the <a href=https://www.vpnbook.com/freevpn>vpnbook</a> for the sake of simplicity.</p><p><img src=/images/vpnbook_screenshot.webp#center alt="vpnbook screenshot"></p><p>The picture shown above is the screenshot of the link to the vpnbook provided above.
 Download any OpenVPN Certificate Bundle from the provided ones according to your location and need.
 I downloaded <a href=https://www.vpnbook.com/free-openvpn-account/VPNBook.com-OpenVPN-US1.zip>US1 OpenVPN Certificate Bundle</a>.
 Now let&rsquo;s go ahead and look at the contents of the zip file you just downloaded.</p><p><img src=/images/openvpn_bundle_contents.webp#center alt="openvpn bundle contents"></p><p>The zip contained the files shown in the figure above.
-As said on the website of vpnbook, these are <em>UDP 53</em>, <em>UDP 25000</em>, <em>TCP 80</em>, and <em>TCP 443</em> profile.
-For those of you who don’t know it, TCP and UDP are protocols and the numbers beside them are the port in which they operate.
-For example, <code>vpnbook-us1-udp53.openvpn</code> has a configuration for UDP protocol operating on port 53 for the VPN.</p><p>Now let’s go ahead and import them from NetworkManager.
+As said on the vpnbook website, they are <em>UDP 53</em>, <em>UDP 25000</em>, <em>TCP 80</em>, and <em>TCP 443</em> profiles.
+For those of you who don’t know about them, TCP and UDP are protocols and, the numbers beside them are the port in which they operate.
+For example, <code>vpnbook-us1-udp53.openvpn</code> has a configuration for UDP protocol on port 53 for the VPN.</p><p>Now let’s go ahead and import them from the NetworkManager.
 But hold on, have you installed the OpenVPN client needed to operate it?
-If not then install the <em>openvpn</em> package needed to operate the OpenVPN.
-Since we are going to import them from NetworkManager, we need a plugin called <em>networkmanager-openvpn</em>, depending on which distribution you are on the package name may differ slightly and it may have been included inside the <em>networkmanager</em> package also.
-Since I am on Arch (I use Arch btw! 😜), those package names are of Arch.
-So, go ahead and do some research for your distribution and install those prerequisites.</p><p>We will be importing the configuration from <em>nm-connection-editor</em> command.
+If not, install the <em>openvpn</em> package required for OpenVPN.
+Since we are going to import them from the NetworkManager, we need a plugin called <em>networkmanager-openvpn</em>.
+Depending on which Linux distribution you are on, the package name may differ slightly and, it may also have been included inside the <em>networkmanager</em> package.
+Since I am on Arch (I use Arch, btw! 😜), those package names belong to Arch.
+So, go ahead and do some research for your distribution and install those prerequisites.</p><p>We will be importing the configuration from the <em>nm-connection-editor</em> command.
 It is a NetworkManager GUI connection editor.
-So, go ahead and enter <em>nm-connection-editor</em> on your terminal or if you are not a fan of entering commands in the terminal, right-click your NetworkManager applet from your taskbar and click on <em>Edit Connections…</em>.
+So, go ahead and enter <em>nm-connection-editor</em> in your terminal or, if you are not a fan of entering commands in the terminal, right-click your NetworkManager applet from your taskbar and click on <em>Edit Connections…</em>.
 Now, you will see a window showing all of your previous network connections.
-Click the <strong>+</strong> icon on the bottom left corner to add the connection.</p><p>You’ll be prompted to choose a connection type from the dropdown, which will default on <em>Ethernet</em>.
-Choose &ldquo;Import a saved VPN configuration&rdquo; <strong>not VPN</strong> which is the last element in the dropdown for my case.
+Click the <strong>+</strong> icon on the bottom left corner to add a connection.</p><p>You’ll be prompted to choose a connection type from the dropdown, which will default on <em>Ethernet</em>.
+Choose &ldquo;Import a saved VPN configuration&rdquo; <strong>not VPN</strong>, which is the last element in the dropdown for my case.
 Then click <em>Create</em>.
-This also shows a quick reminder for you to install openvpn plugin for NetworkManager if you haven’t already as instructed above.</p><p>After clicking <em>Create</em>, you will be prompted to choose the openvpn configuration file.
-Go ahead and show it the .openvpn file you chose earlier.
-Quick info: <strong>UDP is faster but can result in data loss and TCP is more reliable</strong>.
-Vpnbook instructs to use TCP if you cannot connect to UDP due to network restriction.
+This also shows a quick reminder to install the openvpn plugin for NetworkManager if you haven’t already.</p><p>After clicking <em>Create</em>, you will be prompted to choose the OpenVPN configuration file.
+Go ahead and show it the <code>.openvpn</code> file of your choice.
+Quick info: <strong>UDP is faster but can result in data loss and, TCP is more reliable</strong>.
+The Vpnbook instructs you to use TCP if you cannot connect to UDP due to network restriction.
 I am choosing <code>vpnbook-us1-udp53.openvpn</code> and importing it.
-You can choose any one of the four files.</p><p><img src=/images/openvpn_imported.webp#center alt="openvpn configuration imported"></p><p>As you can see the network manager automatically imports the settings for you.
+However, you can import any one of the four files.</p><p><img src=/images/openvpn_imported.webp#center alt="openvpn configuration imported"></p><p>As you can see, the NetworkManager automatically imports the settings for you;
 You don’t have to manually type it.
 The configuration just imported had a key and a certificate inside it.
 So the network manager created them inside the <code>.cert</code> directory in your <code>$HOME</code> directory.
-If you have a different file for your certificate and/or key then also network manager imports it in the configuration but you shouldn’t move the certificate and the key file, since it stores its location in the configuration.
-If you happen to move any of those files then you have to change its location from this configuration in <em>nm-connection-editor</em>.</p><p>Every OpenVPN service you use has a username and password associated with your account.
-Since vpnbook has a common username and password for all the users, its username remains the same but its password changed from time to time.
-So if you’re using vpnbook and you cannot connect to the VPN service then chances are the password has been changed.
+If you have a different file for your certificate and/or key, then also NetworkManager imports it/them in the configuration.
+But you shouldn’t move them since it stores their location there.
+If you happen to move any of those files, you must update their path in this configuration in <em>nm-connection-editor</em>.</p><p>Every OpenVPN service you use has a username and password associated with your account.
+Since the vpnbook has a common username and password for all the users, its username remains the same but, its password changes from time to time.
+So if you are using the vpnbook and cannot connect to the VPN service, the chances are the password has been changed.
 Now go ahead and copy the username and password from the <a href=https://www.vpnbook.com/freevpn>vpnbook</a> and paste it into the configuration shown above.
-You can change the <em>Connection name</em> if you like but shouldn’t change other fields if you don’t know what you’re exactly doing.
-Hit <em>Save</em> when you’re done.</p><p>Now when you click on the network manager applet on the taskbar, you can see the connection name for the VPN set above inside <em>VPN Connections</em>.
+You can change the <em>Connection name</em> if you like but should not alter other fields if you don’t know what you are exactly doing.
+Hit <em>Save</em> when you are done.</p><p>Now when you click on the network manager applet on the taskbar, you can see the connection name for the VPN set above inside <em>VPN Connections</em>.
 Click on the VPN you want to activate.
 The network manager tries to connect you to the VPN selected.
-The icon of the network manager applet also changes.</p><p><a href=https://www.vpnbook.com/freevpn>vpnbook</a> was chosen in this tutorial for the sake of simplicity.
-It is free for everyone so it&rsquo;s extremely slow and you might not have established a successful VPN connection due to this.
-You can try again if it didn’t connect for the first time.</p><p>Right now, I have imported the <a href=https://s3.amazonaws.com/tunnelbear/linux/openvpn.zip>TunnelBear OpenVPN config files</a> in the same way as above.
-Here for username and password, you have to enter your email and password you used when creating an account on <a href=https://www.tunnelbear.com/>TunnelBear</a>.
-It gives you 500MB network transfer per month for free package users. For more, you have to pay for them.</p><p>You can also set up OpenVPN by moving the files to <code>/etc/openvpn/client</code> and starting the openvpn service from the command-line.
+The icon of the network manager applet also changes.</p><p>The <a href=https://www.vpnbook.com/freevpn>vpnbook</a> was chosen in this tutorial for the sake of simplicity.
+It is free for everyone so, it&rsquo;s sluggish and, you might not have established a successful VPN connection due to this.
+You can try again if it doesn’t connect for the first time.</p><p>Right now, I have imported the <a href=https://s3.amazonaws.com/tunnelbear/linux/openvpn.zip>TunnelBear OpenVPN config files</a> in the same way as above.
+Here for username and password, you have to enter the email and password you used when creating an account on <a href=https://www.tunnelbear.com/>TunnelBear</a>.
+It gives you 500MB network transfer per month for free package users. For more, you have to pay for them.</p><p>You can also set up OpenVPN by moving the files to <code>/etc/openvpn/client</code> and starting the openvpn service from the command line.
 More about the process <a href=https://wiki.archlinux.org/index.php/TunnelBear>here</a>.
 But I don’t like to use root access if it can be done by any user.
 The method described in this blog works for users without superuser privileges also.
-The only place where superuser privileges are required is when installing the prerequisite packages.</p><p>So that’s it for today.
+The only place where superuser privileges are required is when installing the prerequisite packages.</p><p>So that’s all for today.
 Let me know your views and reactions in the comments below.</p></div><footer><section class=see-also></section><div id=disqus_thread></div><script type=application/javascript>var disqus_config=function(){};(function(){if(["localhost","127.0.0.1"].indexOf(window.location.hostname)!=-1){document.getElementById('disqus_thread').innerHTML='Disqus comments not available by default when the website is previewed locally.';return}var b=document,a=b.createElement('script');a.async=!0,a.src='//rabinadk1.disqus.com/embed.js',a.setAttribute('data-timestamp',+new Date),(b.head||b.body).appendChild(a)})()</script><noscript>Please enable JavaScript to view the <a href=https://disqus.com/?ref_noscript>comments powered by Disqus.</a></noscript><a href=https://disqus.com class=dsq-brlink>comments powered by <span class=logo-disqus>Disqus</span></a></footer></article></section></div><footer class=footer><section class=container><p>Looking for an interesting project to work on</p>©
 2020 -
 2021
