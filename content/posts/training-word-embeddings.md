@@ -14,7 +14,7 @@ categories = [
 series = ["Artificial Intelligence"]
 +++
 
-# Tokenization
+## Tokenization
 
 
 Since the computer doesn’t understand strings as a numerical value, they need to be converted into numeric forms.
@@ -22,7 +22,7 @@ So the sentences used for training are converted into sequence tokens using some
 The process of converting a text into a sequence of tokens is called tokenization.
 Tokenization can be broadly classified into 3 types viz. word, character, and subword (n-gram characters).
 
-## Word Tokenizer
+### Word Tokenizer
 
 Word tokenizers tokenize each word separately by splitting the sentence with spaces.
 But soon enough, we find out that they are not that great to capture the relationship between the words.
@@ -34,14 +34,14 @@ So the pre-trained model will not perform well if the same rules used to pre-tra
 Another drawback of this method is the vocabulary associated with it.
 An increase in vocabulary means an increase in the size of the embedding matrix, which causes huge consumption of memory.
 
-## Character Tokenizer
+### Character Tokenizer
 
 Character tokenizers tokenize each character as a token.
 Its main advantages are its simplicity and speed and less use of memory than word tokenizers.
 But this doesn’t allow the model to capture long-term dependencies in a sentence and performs poorly.
 The model fails to learn a representation of texts as meaningful as when using a word tokenization.
 
-## Sub-word Tokenizer
+### Sub-word Tokenizer
 
 To get the best of both word-level and character-level tokenizers, sub-word tokenizers are used.
 They use less memory than word-level tokenizers and help capture a more meaningful representation of texts than character-level tokenizers.
@@ -53,7 +53,7 @@ This keeps the same representation for the common words but breaks the rate word
 
 Different types of sub-word tokenizers currently being used in the field of <abbr title="Natural Language Processing">NLP</abbr> are described in brief below.
 
-### Byte Pair Encoding (BPE)
+#### Byte Pair Encoding (BPE)
 
 Byte Pair Encoding, also known as diagram coding, is a simple form of lossless data compression in which the most common pair of consecutive bytes of data is replaced with a byte different from the ones originally in the data or corpus of texts.
 A variant of this technique is used in different state-of-the-art natural language processing applications, like Transformers, and OpenAI’s GPT, GPT-2, and GPT-3.
@@ -76,7 +76,7 @@ But if we chose to remove infrequent tokens to reduce the vocabulary size and we
 For example, if “h” is not in our vocabulary, “hype” may be tokenized as `[“<oov>”, “ype”]`.
 Practically, this happens mainly to special characters like emojis and may occur more in non-English languages.
 
-### Byte-level BPE
+#### Byte-level BPE
 
 The base characters for the vocabulary can be quite big if we opted to incorporate all the Unicode characters.
 The problem of tokenizing texts with `<oov>` tokens is more prominent in a non-English language.
@@ -85,7 +85,7 @@ Since a byte consists of 8 bits, there are 2<sup>8</sup> i.e. 256 combinations o
 This helps to tokenize every text without needing an out of vocabulary token.
 This clever trick was proposed in [GPT-2 Paper](https://openai.com/blog/better-language-models/).
 
-### WordPiece
+#### WordPiece
 
 WordPiece is a sub-word tokenization algorithm that is used in language representation models like [BERT](https://arxiv.org/abs/1810.04805) and was outlined in [JAPANESE AND KOREAN VOICE SEARCH](https://static.googleusercontent.com/media/research.google.com/ja//pubs/archive/37842.pdf) paper.
 
@@ -99,7 +99,7 @@ In contrast to it, WordPiece chooses a pair `yz` with maximum conditional probab
 In layman’s terms, it evaluates what it loses by merging two symbols and makes sure it’s worth it.
 It focuses more on rare sub-word tokens.
 
-### SentencePiece
+#### SentencePiece
 
 All the tokenizing methods discussed above required some pre-tokenization.
 Those methods act like sub-word tokenizers which have to know what words are.
@@ -113,7 +113,7 @@ So we may find different tokens with `_` in them.
 The models like XLM described in [Cross-lingual Language Model Pretraining](https://arxiv.org/abs/1901.07291) described in use this kind of tokenization.
 This is considered to be the state-of-the-art tokenizer at the time of writing this document.
 
-# One-Hot Encoding
+## One-Hot Encoding
 
 Since tokens are just numbers, they might represent a token to be of higher importance than others.
 So they need to be converted into a one-hot vector.
@@ -122,7 +122,7 @@ But the problem with the one-hot vector is that their dimension is equal to the 
 Also since the vectors are one-hot encoded, they are all perpendicular to each other.
 So there is no sense of similarity between them.
 
-# Word Embedding
+## Word Embedding
 
 People started to search for a method to compress the one-hot vector to save space and provide a sense of similarity between the word vectors.
 In layman’s words, word embedding is a learned representation of text where words with similar meanings have similarities among them.
@@ -162,7 +162,7 @@ A sample image showing the nearest ten points of word _man_ for the _Word2Vec 10
 
 Since the word embeddings are built solely upon the data seen by the model, they may contain biases in terms of race and gender as described in [Man is to Computer Programmer as Woman is to Homemaker? Debiasing Word Embeddings](https://arxiv.org/abs/1607.06520). The embeddings should be debiased before taking the model into production.
 
-# Training Word Embeddings
+## Training Word Embeddings
 
 Each token picks up a randomly initialized vector from the embedding matrix using its unique index and the loss of the model is backpropagated to update the vectors and ultimately the matrix.
 When the training is complete the embedding matrix contains dense vectors for each token which can be used to make different interpretations about the model and the particular task on which the model was trained.
@@ -173,7 +173,7 @@ Pre-trained word embedding can also be used and fine-tuned for the specific task
 Since the pre-trained embeddings have more vocab size than text available for the specific task they help even when we get the words that were not present in the training data while testing.
 Those pre-trained embeddings are trained in an unsupervised way so that they preserve the context of the text in which they are trained and maximize the likelihood of the sentences in the training set.
 
-# References and Further Readings
+## References and Further Readings
 
 - [Summary of the Tokenizers - Hugging Face](https://huggingface.co/transformers/tokenizer_summary.html)
 - [The Illustrated Word2vec - Jay Alammar](https://jalammar.github.io/illustrated-word2vec/)
